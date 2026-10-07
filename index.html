@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Govind Chavan | Data Analyst & Python Freelancer</title>
+
+<meta name="description"
+content="Govind Chavan - Data Analyst, Python Developer and Data Science Freelancer. Data cleaning, Excel, Python, Pandas and data analysis services.">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050816;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#5b21ff;
+    filter:blur(180px);
+    opacity:.18;
+    top:-150px;
+    left:-150px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#00b7ff;
+    filter:blur(180px);
+    opacity:.12;
+    right:-150px;
+    bottom:-150px;
+    z-index:-2;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(5,8,22,.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#7c4dff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#cbd5e1;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#8b5cf6;
+}
+
+.nav-btn{
+    background:linear-gradient(135deg,#6d28d9,#4f46e5);
+    padding:11px 20px;
+    border-radius:10px;
+    font-size:14px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:80px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 15px;
+    border:1px solid rgba(124,77,255,.4);
+    background:rgba(124,77,255,.08);
+    border-radius:50px;
+    color:#b8a6ff;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(45px,6vw,75px);
+    line-height:1.02;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    color:#8b5cf6;
+}
+
+.hero p{
+    margin-top:25px;
+    max-width:620px;
+    color:#94a3b8;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.primary{
+    padding:14px 25px;
+    background:linear-gradient(135deg,#7c3aed,#4f46e5);
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 40px rgba(124,58,237,.35);
+}
+
+.secondary{
+    padding:14px 25px;
+    border:1px solid #334155;
+    border-radius:12px;
+    color:#cbd5e1;
+}
+
+.socials{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.socials a{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #263248;
+    border-radius:50%;
+    color:#94a3b8;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:white;
+    background:#6d28d9;
+    transform:translateY(-3px);
+}
+
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-area{
+    display:flex;
+    justify-content:center;
+}
+
+.profile-wrapper{
+    position:relative;
+    width:390px;
+    height:460px;
+}
+
+.profile-glow{
+    position:absolute;
+    inset:20px;
+    background:#6d28d9;
+    filter:blur(80px);
+    opacity:.35;
+}
+
+.profile-card{
+    position:relative;
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    border:1px solid rgba(139,92,246,.4);
+    background:linear-gradient(145deg,
+        rgba(124,58,237,.15),
+        rgba(15,23,42,.8));
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+.profile-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    margin-bottom:45px;
+}
+
+.section-title small{
+    color:#8b5cf6;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-top:10px;
+}
+
+.section-title p{
+    margin-top:12px;
+    color:#64748b;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:28px;
+    border:1px solid #1e293b;
+    background:rgba(15,23,42,.65);
+    border-radius:18px;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#6d28d9;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.icon{
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    background:rgba(124,58,237,.15);
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#94a3b8;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project{
+    overflow:hidden;
+    border:1px solid #1e293b;
+    border-radius:18px;
+    background:#0b1220;
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
+    border-color:#7c3aed;
+}
+
+.project-image{
+    height:170px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle at center,#312e81,#0f172a 70%);
+    font-size:60px;
+}
+
+.project-content{
+    padding:22px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#94a3b8;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:15px;
+}
+
+.tags span{
+    padding:5px 9px;
+    border-radius:20px;
+    background:#172033;
+    color:#a5b4fc;
+    font-size:11px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill{
+    padding:12px 18px;
+    border-radius:30px;
+    border:1px solid #263248;
+    background:#0b1220;
+    color:#cbd5e1;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-text p{
+    color:#94a3b8;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.stat{
+    padding:25px;
+    border:1px solid #1e293b;
+    border-radius:15px;
+    background:#0b1220;
+}
+
+.stat h3{
+    color:#8b5cf6;
+    font-size:30px;
+}
+
+.stat p{
+    color:#94a3b8;
+    margin-top:5px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:60px;
+    border-radius:25px;
+    text-align:center;
+    background:
+        radial-gradient(circle at top left,#312e81,transparent 45%),
+        linear-gradient(135deg,#111827,#0b1220);
+    border:1px solid #312e81;
+}
+
+.cta h2{
+    font-size:40px;
+}
+
+.cta p{
+    color:#94a3b8;
+    margin:15px auto 25px;
+    max-width:600px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:30px 0;
+    border-top:1px solid #1e293b;
+    text-align:center;
+    color:#64748b;
+    font-size:13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .profile-wrapper{
+        width:300px;
+        height:380px;
+    }
+
+    .services-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .cta{
+        padding:40px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+<div class="container nav-inner">
+
+<div class="logo">
+Govind<span>.</span>
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="#contact" class="nav-btn">
+Let's Talk
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+● Available for Freelance Work
+</div>
+
+<h1>
+Data that <span>works.</span><br>
+Insights that <span>matter.</span>
+</h1>
+
+<p>
+I'm <strong>Govind Chavan</strong> — a B.Sc. Information Technology
+graduate and Data Science learner. I help individuals and businesses
+with data entry, Excel, Python, data cleaning, research and data analysis.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="primary">
+Let's Work Together →
+</a>
+
+<a href="#projects" class="secondary">
+View My Projects
+</a>
+
+</div>
+
+
+<div class="socials">
+
+<a href="https://github.com/samchavan160104-tech" target="_blank">
+GH
+</a>
+
+<a href="https://www.linkedin.com/" target="_blank">
+in
+</a>
+
+<a href="mailto:samchavan160104@gmail.com">
+@
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROFILE -->
+
+<div class="profile-area">
+
+<div class="profile-wrapper">
+
+<div class="profile-glow"></div>
+
+<div class="profile-card">
+
+<!--
+IMPORTANT:
+Upload your photo to GitHub with this exact name:
+profile.jpg
+-->
+
+<img src="profile.jpg"
+alt="Govind Chavan">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>SERVICES</small>
+
+<h2>What I Can Help With</h2>
+
+<p>
+Practical digital and data services for individuals,
+startups and businesses.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>Data Analysis</h3>
+
+<p>
+Basic data analysis, summaries and insights using
+Excel, Python and Pandas.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🐍</div>
+
+<h3>Python & Pandas</h3>
+
+<p>
+Python-based data processing, cleaning and
+automation tasks.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📑</div>
+
+<h3>Excel & CSV</h3>
+
+<p>
+Data formatting, cleaning, organization and
+spreadsheet preparation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧹</div>
+
+<h3>Data Cleaning</h3>
+
+<p>
+Remove duplicates, handle missing values and
+prepare structured datasets.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔎</div>
+
+<h3>Web Research</h3>
+
+<p>
+Online research, data collection and organized
+information gathering.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📄</div>
+
+<h3>PDF to Excel</h3>
+
+<p>
+Convert structured information from documents
+into editable spreadsheets.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>PROJECTS</small>
+
+<h2>Featured Projects</h2>
+
+<p>
+Hands-on projects demonstrating my technical and
+data skills.
+</p>
+
+</div>
+
+
+<div class="projects-grid">
+
+
+<div class="project">
+
+<div class="project-image">
+🏠
+</div>
+
+<div class="project-content">
+
+<h3>House Price Prediction</h3>
+
+<p>
+Machine learning project for predicting house
+prices using structured housing data.
+</p>
+
+<div class="tags">
+<span>Python</span>
+<span>Pandas</span>
+<span>Scikit-learn</span>
+<span>ML</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+🧹
+</div>
+
+<div class="project-content">
+
+<h3>Data Cleaning & Analysis</h3>
+
+<p>
+Practical workflow for handling missing values,
+duplicates and basic exploratory analysis.
+</p>
+
+<div class="tags">
+<span>Python</span>
+<span>Pandas</span>
+<span>EDA</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+🐍
+</div>
+
+<div class="project-content">
+
+<h3>Python Data Processing</h3>
+
+<p>
+Python-based data processing exercises focused
+on transforming raw datasets.
+</p>
+
+<div class="tags">
+<span>Python</span>
+<span>CSV</span>
+<span>Pandas</span>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<small>SKILLS</small>
+
+<h2>My Technical Toolkit</h2>
+
+</div>
+
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Pandas</div>
+<div class="skill">NumPy</div>
+<div class="skill">Excel</div>
+<div class="skill">Data Cleaning</div>
+<div class="skill">Data Analysis</div>
+<div class="skill">SQL</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">GitHub</div>
+<div class="skill">CSV Processing</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container about-grid">
+
+<div class="about-text">
+
+<div class="section-title">
+
+<small>ABOUT ME</small>
+
+<h2>A Little About Me</h2>
+
+</div>
+
+<p>
+I'm <strong>Govind Chavan</strong>, a B.Sc. Information Technology
+graduate from COCSIT College and a Data Science learner.
+</p>
+
+<p>
+I'm currently building practical skills in Python, Pandas,
+Excel and data analysis while working on real-world projects.
+</p>
+
+<p>
+My goal is to provide accurate, reliable and well-organized
+work for every client.
+</p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<h3>B.Sc.</h3>
+<p>Information Technology</p>
+</div>
+
+<div class="stat">
+<h3>Python</h3>
+<p>Data Processing</p>
+</div>
+
+<div class="stat">
+<h3>Excel</h3>
+<p>Data Cleaning</p>
+</div>
+
+<div class="stat">
+<h3>Remote</h3>
+<p>Freelance Availability</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>Have a data task?</h2>
+
+<p>
+Need help with Excel, data entry, data cleaning,
+web research or a basic Python data task?
+Let's work together.
+</p>
+
+<div class="buttons"
+style="justify-content:center;">
+
+<a class="primary"
+href="mailto:samchavan160104@gmail.com">
+📧 Email Me
+</a>
+
+<a class="secondary"
+href="https://github.com/samchavan160104-tech"
+target="_blank">
+GitHub →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+© 2026 Govind Chavan.
+Built for freelance & data projects.
+
+</footer>
+
+
+</body>
+</html>
